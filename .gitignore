@@ -20,3 +20,5 @@ mapping.txt
 !.idea/codeStyleSettings.xml
 !.idea/fileTemplates/
 !.idea/inspectionProfiles/
+.idea/workspace.xml
+app/app.iml
