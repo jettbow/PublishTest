@@ -17,6 +17,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+        }
+        release {
+            storeFile file("release.keystore")
+            storePassword "bow123"
+            keyAlias "test"
+            keyPassword "bow123"
+        }
+    }
+    productFlavors {
+
+        production {
+            applicationId 'test.publish.publishtest'
+        }
+    }
 }
 
 dependencies {
