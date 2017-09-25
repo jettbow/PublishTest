@@ -1,13 +1,13 @@
 set -e
 if [[ `git status --porcelain` ]]; then
-  echo "Error:You have changes in the current branch. Make it clean before merging the release"
+  echo "Error:You have changes in the current branch. Make it clean before merging the release."
   exit
 fi
-echo "Please enter release branch name(e.g release/2.33.0): "
+echo "Please enter the name of the release branch (e.g release/2.33.0): "
 read release_branch
 echo 'git fetch origin "$release_branch"'
 git fetch origin "$release_branch"
-echo "Please enter a new Tag name(e.g 2.33.0): "
+echo "Please enter the name of new Tag (e.g 2.33.0): "
 read release_tag
 while [[ "$release_tag" == v* ]]
 do
