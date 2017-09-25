@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "api-7402275247672540660-433692",
+  "private_key_id": "f3e7c36d4885f725ef297454c1c5ea14983bed99",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQD3TQeAj36kKoj/\nKkp50w3UELkAlXVh7jE0T2UPVqH61o6BzuRHi+4dDCUQr90m/FpMRtMHqiZNCSVl\ngvvovjWG/kEzCdLhnrRInTQGd7dS4jHPdOrGCPj18KX6UE8JFZEMSHfxJrdNsncT\nxmqzr7L3Ay5ra0RgZYBOnoSqAvUDbUjz4b/EQB8duQeFsbKfeE41YeiZYdZF89sW\nQtk7dVn64dFpFoBXWC6BHeTg6xaCTe2m4YCdI+Q2pe4x1cYlQgwkkApiWxV0N0dD\nvcI+5DMUyjUiB/hG2cZUDMM9tUuh90zZNt5zFG8KwRGOXZT91+/aNvl6dIuIu0fS\nGVz7fR/RAgMBAAECggEAV/pkZ90kzZyAPl66PhrSeZY1arrBFsTZZmW0az+Dwqwf\n6JhE6Bsk69qNOSGHiL4QFcDAhKKIm7FcR3/QxJ0eh9beNR0Sk8eVFZwvjPl8E5V6\n6PYMK8W3ZC9nrORzKaUtg/QoD3eZkJ+j8zoMbb5c6bmNAxQXMEAL5GxKf/0rUzsT\nyDMDmVZIrXsaTkGyL1AMf/j3/rLGRvgY43JuWDoXOZYWlVPt6KoDlvJh/qKurKj7\nqH/lb8sj+HoN8AjoHAidfdHo7pKJ2CjM19H32JevffpR7y1ycryd6t+aTk21du44\nuLsBfvZxytp3hv1kgPfrmQkbWBYS0ix1EuF7UNdkXQKBgQD9OyLtT5tOmNOxBDJ+\n8TpHmD1r1e0JHfTy5rM+VsX31XdcizvU+o1P7v07NTIvHiSTGZKLUfzUm6IMvA28\n2BfWWi88xs+5Ikp1ZNkrPuACbTD5CPkHpqmhjS6e+Ydy2vJNHqAcGiNPkWMCqzpi\nqoBxYe7X2GCSrUkf3hXVFoG0KwKBgQD6AUr5RvqibWxDX+ir4+NmBPFdVM1BygkI\nOwgXa/+e5DDdP9tFS9yv8F6lVV4g22twbhBnztdN7roRdsKkvymwM9CxUVM0PDMP\nJ4+ebWpyRnL4YN/tbbN4C0/LVDLmcMkeFtiossgG/Dxgze+VvCno2ykQi8iu0OQa\nt++RItjR8wKBgFyaaZVazTKa1J8hJ84gLO3NkHiEzJ/O4qqJDvc3CEIvP+0JxaGG\n1nJqtRQXyfhND5bzfRGRs+GT4FjD1EpAw8bRSADzuza6gXwYmwojfgulHomTbG4N\n1m6LkIb2PUAVLRJipq5gKJWKVyi8sScvrrTH2W35ZKd+0wTiVB2Ok3PtAoGBAMca\n9Hzm3IEzqD9YSNNsoRQE570u5nF42AyoBt+wcVo33fq2+oiLzGyKgLYn8Nk2JrDZ\n11L1Vl+IusNh086lOCxOd+xgGmXFc9yj4yuHdHkiRjot3OkYrw/x4lDK8+a2+FVw\nWIiyKb/2bpeiKycTPkVnFaNJ0D/5uVDWIIN0Pz2lAoGAKqUBuvvwR7hPjDM7KgHk\n6OXo26H40zDbv5FOYh14t+euxRGVnRfifWIXMxxYKnepLguFN9d7VHVp+U3SZQfm\n54wQ9dSlz9pA/qeM5Om9enjoUHWyfDknk+rs1iZ7Yw7q67WYnVccjvoB3s8awnqO\nNjRK53b5QCVFd9d9y35d9OE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "jenkins-publish-apk@api-7402275247672540660-433692.iam.gserviceaccount.com",
+  "client_id": "100138518429983326453",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/jenkins-publish-apk%40api-7402275247672540660-433692.iam.gserviceaccount.com"
+}

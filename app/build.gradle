@@ -1,15 +1,22 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.github.triplet.play'
 
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
+    playAccountConfigs {
+        defaultAccountConfig {
+            jsonFile = file('keys.json')
+        }
+    }
     defaultConfig {
         applicationId "test.publish.jt.publishtest"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
     signingConfigs {
         debug {
@@ -35,6 +42,10 @@ android {
         production {
             applicationId 'test.publish.publishtest'
         }
+    }
+    play {
+        track = 'alpha'
+
     }
 }
 
