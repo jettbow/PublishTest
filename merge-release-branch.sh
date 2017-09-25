@@ -38,11 +38,11 @@ fi
 git merge --abort
 #
 git checkout dev 
-git merge --no-ff "$release_branch"
+git merge --no-ff --no-edit "$release_branch"
 git push origin dev
 #
 git checkout master 
-git merge --no-ff "$release_branch"
+git merge --no-ff --no-edit "$release_branch"
 git push origin master
 #
 git tag -a "$release_tag" -m '"$release_tag"'
