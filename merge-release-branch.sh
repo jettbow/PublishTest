@@ -3,7 +3,8 @@ if [ "$1" == "" ]
 then
   echo "Error:Please specify the name of release branch"
   exit
-fi 
+fi
+# 
 if [ "$2" == "" ]
 then
   echo "Error:Please specify the name of release Tag"
@@ -15,6 +16,9 @@ then
   exit
 fi 
 
+##
+
+##
 git fetch origin master dev "$1"
 git checkout -B master origin/master
 git checkout -B dev origin/dev
