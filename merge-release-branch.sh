@@ -1,30 +1,35 @@
 set -e
-if [ "$1" == "" ]
-then
-  echo "Error:Please specify the name of release branch"
+if [[ `git status --porcelain` ]]; then
+  echo "Error:You have changes in the current branch. Make it clean before merging the release"
   exit
-fi 
-if [ "$2" == "" ]
-then
-  echo "Error:Please specify the name of release Tag"
-  exit
-fi 
-if [[ "$2" == v* ]]
+fi
+echo "Please enter release branch name(e.g release/2.33.0): "
+read release_branch
+git fetch origin "$release_branch"
+echo "Please enter a new Tag name(e.g 2.33.0): "
+read release_tag
+while [[ "$release_tag" == v* ]]
 then
   echo "Error:Tag name should not start with 'v'"
+  echo "Please enter a new Tag name(e.g 2.33.0): "
+  read release_tag
   exit
 fi 
+echo "Release branch: $release_branch"
+echo "Tag name: $release_tag"
+read -p "Press enter to continue"
 
-git fetch origin master dev "$1"
+git fetch origin master dev "$release_branch"
 git checkout -B master origin/master
 git checkout -B dev origin/dev
-git checkout -B "$1" origin/"$1"
+git checkout -B "$release_branch" origin/"$release_branch"
 git checkout dev 
-git merge "$1"
+git merge "$release_branch"
 git push origin dev
 git checkout master 
-git merge "$1"
+git merge "$release_branch"
 git push origin master
-git tag -a "$2" -m '"$2"'
-git push origin "$2"
-open https://github.com/jettbow/PublishTest/releases/new?tag="$2"
+git tag -a "$release_tag" -m '"$release_tag"'
+git push origin "$release_tag"
+read -p "Press enter to continue opening Carousell-Android page for adding new Release in GitHub..."
+open https://github.com/carousell/Carousell-Android/releases/new?tag="$release_tag"
