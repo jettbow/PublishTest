@@ -6,7 +6,7 @@ if [[ `git status --porcelain` ]]; then
 fi
 echo "Please enter the name of the release branch (e.g release/2.33.0): "
 read release_branch
-echo "Fetching origin $release_branch..."
+echo "Fetching $release_branch from remote ..."
 git fetch origin "$release_branch"
 echo "Please enter the name of new Tag (e.g 2.33.0): "
 read release_tag
@@ -25,7 +25,7 @@ git checkout dev
 echo "Checking conflicts between dev and $release_branch"
 if [[ `git merge $release_branch --no-commit --no-ff | grep "CONFLICT"` ]]; then
 	git merge --abort
-	git checkout $current_branch
+	git checkout "$current_branch"
 	echo "Error: There are conflicts between dev and $release_branch"
 	exit
 fi
@@ -34,7 +34,7 @@ git checkout master
 echo "Checking conflicts between master and $release_branch"
 if [[ `git merge $release_branch --no-commit --no-ff | grep "CONFLICT"` ]]; then
 	git merge --abort
-	git checkout $current_branch
+	git checkout "$current_branch"
 	echo "There are conflicts between dev and $release_branch"
 	exit
 fi
