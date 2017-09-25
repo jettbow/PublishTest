@@ -5,7 +5,7 @@ if [[ `git status --porcelain` ]]; then
 fi
 echo "Please enter the name of the release branch (e.g release/2.33.0): "
 read release_branch
-echo 'git fetch origin "$release_branch"'
+echo 'fetch origin $release_branch...'
 git fetch origin "$release_branch"
 echo "Please enter the name of new Tag (e.g 2.33.0): "
 read release_tag
