@@ -1,5 +1,6 @@
 set -e
 current_branch=`git rev-parse --abbrev-ref HEAD`
+
 if [[ `git status --porcelain` ]]; then
   echo "Error: You have changes in the current branch. Make it clean before merging the release."
   exit
