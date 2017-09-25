@@ -37,15 +37,22 @@ if [[ `git merge $release_branch --no-commit --no-ff | grep "CONFLICT"` ]]; then
 fi
 git merge --abort
 #
+echo "> git checkout dev "
 git checkout dev 
+echo "> git merge --no-ff --no-edit $release_branch"
 git merge --no-ff --no-edit "$release_branch"
+echo "> git push origin dev"
 git push origin dev
 #
+echo "> git checkout master "
 git checkout master 
+echo "> git merge --no-ff --no-edit $release_branch"
 git merge --no-ff --no-edit "$release_branch"
+echo "> git push origin master"
 git push origin master
 #
 git tag -a "$release_tag" -m '"$release_tag"'
+echo "> git push origin $release_tag"
 git push origin "$release_tag"
 read -p "Press enter to continue opening Carousell-Android page for adding new Release in GitHub..."
 open https://github.com/carousell/Carousell-Android/releases/new?tag="$release_tag"
