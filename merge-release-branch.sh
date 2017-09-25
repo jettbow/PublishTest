@@ -4,16 +4,16 @@ if [[ `git status --porcelain` ]]; then
   echo "Error: You have changes in the current branch. Make it clean before merging the release."
   exit
 fi
-echo "Please enter the name of the release branch (e.g release/2.33.0): "
+echo "Please enter the name of the release branch : (e.g release/2.33.0)"
 read release_branch
 echo "Fetching $release_branch from remote ..."
 git fetch origin "$release_branch"
-echo "Please enter the name of new Tag (e.g 2.33.0): "
+echo "Please enter the name of new Tag : (e.g 2.33.0)"
 read release_tag
 while [[ "$release_tag" == v* ]]
 do
   echo "Error: Tag name should not start with 'v'"
-  echo "Please enter a new Tag name(e.g 2.33.0): "
+  echo "Please enter a new Tag name : (e.g 2.33.0)"
   read release_tag
 done 
 
