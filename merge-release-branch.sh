@@ -5,16 +5,17 @@ if [[ `git status --porcelain` ]]; then
 fi
 echo "Please enter release branch name(e.g release/2.33.0): "
 read release_branch
+echo 'git fetch origin "$release_branch"'
 git fetch origin "$release_branch"
 echo "Please enter a new Tag name(e.g 2.33.0): "
 read release_tag
 while [[ "$release_tag" == v* ]]
-then
+do
   echo "Error:Tag name should not start with 'v'"
   echo "Please enter a new Tag name(e.g 2.33.0): "
   read release_tag
   exit
-fi 
+done 
 echo "Release branch: $release_branch"
 echo "Tag name: $release_tag"
 read -p "Press enter to continue"
