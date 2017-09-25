@@ -19,4 +19,11 @@ git fetch origin master dev "$1"
 git checkout -B master origin/master
 git checkout -B dev origin/dev
 git checkout -B "$1" origin/"$1"
-git branch
+git checkout dev 
+git merge "$1"
+git push origin dev
+git checkout master 
+git merge "$1"
+git push origin master
+git tag -a "$2" -m \""$2"\"
+git push origin "$2"
