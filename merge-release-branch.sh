@@ -25,7 +25,6 @@ git push origin dev
 git checkout master 
 git merge "$1"
 git push origin master
-#git tag -a "$2" -m '"$2"'
-#git push origin "$2"
-
-curl -H "Content-Type: application/json" -X POST -d '{"tag_name":""$2"","target_commitish": "master","name": ""$2"","body": "","draft": false,"prerelease": false}' https://github.com/jettbow/PublishTest/releases
+git tag -a "$2" -m '"$2"'
+git push origin "$2"
+open https://github.com/jettbow/PublishTest/releases/new?tag="$2"
