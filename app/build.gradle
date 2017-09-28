@@ -16,7 +16,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode gradleVersionCode
-        versionName localVersionName
+        versionName gradleVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
