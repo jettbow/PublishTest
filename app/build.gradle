@@ -4,6 +4,8 @@ apply plugin: 'com.github.triplet.play'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
+    def gradleVersionCode = envVersionCode as Integer
+    def gradleVersionName = envVersionName as String
     playAccountConfigs {
         defaultAccountConfig {
             jsonFile = file('keys.json')
@@ -13,8 +15,8 @@ android {
         applicationId "test.publish.jt.publishtest"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 3
-        versionName "1.2"
+        versionCode gradleVersionCode
+        versionName localVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
