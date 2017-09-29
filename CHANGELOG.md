@@ -1,4 +1,9 @@
-## [2.34.0]
+## [2.35.0]
+### Added
+### Changed
+### Removed
+### Fixed
+## [2.34.0] - 2017-09-29
 ### Added
 ### Changed
 ### Removed
