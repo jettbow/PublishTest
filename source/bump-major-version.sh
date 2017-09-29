@@ -45,7 +45,7 @@ fi
 echo "${text}" > ./gradle.properties
 echo "Bump version $env_version_name($env_version_code)"
 now="$(date +'%Y-%m-%d')"
-sed -i '' "1 s/$/ - $now/" $root_dir/CHANGELOG.md
+sed -i "1 s/$/ - $now/" $root_dir/CHANGELOG.md
 echo -e "## [$env_version_name]\n### Added\n### Changed\n### Removed\n### Fixed\n$(cat $root_dir/CHANGELOG.md)" > $root_dir/CHANGELOG.md
 git add -A
 git commit -m "Bump version $env_version_name($env_version_code)"
