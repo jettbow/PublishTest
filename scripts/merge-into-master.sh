@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 root_dir=$(dirname $0)/..
-env_version_name=`$root_dir/scripts/get-curren-version-name.sh`
+env_version_name=`$root_dir/scripts/get-current-version-name.sh`
 cd $root_dir/
 git checkout $env_version_name
 git branch temp
