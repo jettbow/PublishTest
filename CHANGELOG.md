@@ -1,5 +1,6 @@
 ## [2.36.0]
 ### Added
+Added a feature
 ### Changed
 ### Removed
 ### Fixed
