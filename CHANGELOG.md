@@ -1,4 +1,9 @@
-## [2.36.0]
+## [2.37.0]
+### Added
+### Changed
+### Removed
+### Fixed
+## [2.36.0] - 2017-10-03
 ### Added
 Add 123
 Added a feature
