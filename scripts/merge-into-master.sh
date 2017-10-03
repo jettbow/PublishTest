@@ -1,7 +1,12 @@
 #!/bin/bash
 set -e
+if [ "$1" == "" ]
+then
+  echo "Error:Please specify the versoin name"
+  exit
+fi
 root_dir=$(dirname $0)/..
-env_version_name=`$root_dir/scripts/get-current-version-name.sh`
+env_version_name="$1"
 cd $root_dir/
 git checkout $env_version_name
 git branch temp
