@@ -1,4 +1,9 @@
-## [2.39.0]
+## [2.40.0]
+### Added
+### Changed
+### Removed
+### Fixed
+## [2.39.0] - 2017-10-03
 ### Added
 ### Changed
 ### Removed
