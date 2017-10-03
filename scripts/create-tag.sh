@@ -44,8 +44,9 @@ echo "${text}" > $root_dir/gradle.properties
 $root_dir/scripts/merge-NEW-into-CHANGELOG.sh
 cd $root_dir/
 
+git checkout dev
 git add -A 
-#git commit -m "Tag $tag"
-#git tag -a $tag -m "$tag"
+git commit -m "Tag $tag"
+git tag -a $tag -m "$tag"
 
 
