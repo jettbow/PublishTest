@@ -4,6 +4,7 @@ then
   echo "Error:Please specify the build number"
   exit
 fi 
+git checkout dev
 root_dir=$(dirname $0)/..
 tag=""
 maror=""
@@ -44,7 +45,6 @@ echo "${text}" > $root_dir/gradle.properties
 $root_dir/scripts/merge-NEW-into-CHANGELOG.sh
 cd $root_dir/
 
-git checkout dev
 git add -A 
 git commit -m "Tag $tag"
 git tag -a $tag -m "$tag"
