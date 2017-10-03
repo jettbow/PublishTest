@@ -34,6 +34,9 @@ then
           minor=$(echo $value | cut -d'.' -f2)
           tag=$major"."$minor"."$build
           text=$text"$key=${tag}"$newline
+        elif [ "$key" == "envVersionCode" ]   
+        then
+          text=$text"$key=$((${value}+1))"$newline
         else
           text=$text"$key=$value"$newline
         fi
