@@ -8,8 +8,8 @@ number_of_newline=`echo "$replace" | wc -l`
 if test $number_of_newline -gt 1
 then
 	replace=`echo "$replace"|sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/\[!@#\]/g'`
-	sed -i '' "1,/### Added/s/### Added/$replace/" $root_dir/CHANGELOG.md
-	sed -i '' 's/\[!@#\]/\
+	sed -i "1,/### Added/s/### Added/$replace/" $root_dir/CHANGELOG.md
+	sed -i 's/\[!@#\]/\
 /g' $root_dir/CHANGELOG.md
 fi
 
@@ -20,8 +20,8 @@ number_of_newline=`echo "$replace" | wc -l`
 if test $number_of_newline -gt 1
 then
 	replace=`echo "$replace"|sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/\[!@#\]/g'`
-	sed -i '' "1,/### Changed/s/### Changed/$replace/" $root_dir/CHANGELOG.md
-	sed -i '' 's/\[!@#\]/\
+	sed -i "1,/### Changed/s/### Changed/$replace/" $root_dir/CHANGELOG.md
+	sed -i 's/\[!@#\]/\
 /g' $root_dir/CHANGELOG.md
 fi
 
@@ -32,8 +32,8 @@ number_of_newline=`echo "$replace" | wc -l`
 if test $number_of_newline -gt 1
 then
 	replace=`echo "$replace"|sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/\[!@#\]/g'`
-	sed -i '' "1,/### Removed/s/### Removed/$replace/" $root_dir/CHANGELOG.md
-	sed -i '' 's/\[!@#\]/\
+	sed -i "1,/### Removed/s/### Removed/$replace/" $root_dir/CHANGELOG.md
+	sed -i 's/\[!@#\]/\
 /g' $root_dir/CHANGELOG.md
 fi
 
@@ -42,8 +42,8 @@ number_of_newline=`echo "$replace" | wc -l`
 if test $number_of_newline -gt 1
 then
 	replace=`echo "$replace"|sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/\[!@#\]/g'`
-	sed -i '' "1,/### Fixed/s/### Fixed/$replace/" $root_dir/CHANGELOG.md
-	sed -i '' 's/\[!@#\]/\
+	sed -i "1,/### Fixed/s/### Fixed/$replace/" $root_dir/CHANGELOG.md
+	sed -i 's/\[!@#\]/\
 /g' $root_dir/CHANGELOG.md
 fi
 
