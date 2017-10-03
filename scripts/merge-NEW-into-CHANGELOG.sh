@@ -49,6 +49,3 @@ fi
 
 echo -e "### Added\n### Changed\n### Removed\n### Fixed" > $root_dir/NEW.md
 
-git add -A
-git commit -m "Tag xxx"
-echo 123

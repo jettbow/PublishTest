@@ -41,7 +41,13 @@ then
   done < "$file"
 fi
 echo "${text}" > $root_dir/gradle.properties
+$root_dir/scripts/merge-NEW-into-CHANGELOG.sh
 cd $root_dir/
+
+git add -A 
+git commit -m "Tag $tag"
+git push origin dev
 git tag -a $tag -m "$tag"
 git push origin $tag
+
 
