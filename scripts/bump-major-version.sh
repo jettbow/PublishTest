@@ -3,7 +3,6 @@ set -e
 root_dir=$(dirname $0)/..
 text=""
 env_version_name=""
-env_version_code=0
 newline=$'\n'
 file="$root_dir/gradle.properties"
 
@@ -31,10 +30,6 @@ then
           minor=$(echo $value | cut -d'.' -f2)
           env_version_name=$major.$((${minor}+1)).0
           text=$text"$key=${env_version_name}"$newline
-        elif [ "$key" == "envVersionCode" ]   
-        then
-          env_version_code=$((${value}+1))
-          text=$text"$key=$((${value}+1))"$newline
         else
           text=$text"$key=$value"$newline
         fi
@@ -43,7 +38,7 @@ then
   done < "$file"
 fi
 echo "${text}" > ./gradle.properties
-echo "Bump version $env_version_name($env_version_code)"
+echo "Bump version $env_version_name"
 now="$(date +'%Y-%m-%d')"
 sed -i "1 s/$/ - $now/" $root_dir/CHANGELOG.md
 echo -e "## [$env_version_name]\n### Added\n### Changed\n### Removed\n### Fixed\n$(cat $root_dir/CHANGELOG.md)" > $root_dir/CHANGELOG.md
