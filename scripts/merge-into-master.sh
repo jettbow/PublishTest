@@ -6,6 +6,6 @@ cd $root_dir/
 git checkout $env_version_name
 git branch temp
 git checkout master 
-git merge -ff temp 
+git merge --ff temp 
 git push origin master
 git branch -D temp

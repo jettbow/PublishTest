@@ -7,6 +7,6 @@ git checkout $env_version_name
 git branch temp
 $root_dir/bump-major-version.sh
 git checkout dev 
-git merge -ff temp 
+git merge --ff temp 
 git push origin dev
 git branch -D temp
