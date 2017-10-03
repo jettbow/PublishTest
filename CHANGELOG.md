@@ -6,6 +6,8 @@ Added a feature
 Refactor 213
 ### Removed
 ### Fixed
+Fix 132
+Fix de1e
 Fix 2ko213
 ## [2.35.0] - 2017-09-29
 ### Added
