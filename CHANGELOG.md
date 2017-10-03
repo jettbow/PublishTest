@@ -3,6 +3,7 @@
 ### Changed
 ### Removed
 ### Fixed
+- Fix 12323
 ## [2.40.0] - 2017-10-03
 ### Added
 - Add what what what
