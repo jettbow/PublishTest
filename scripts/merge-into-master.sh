@@ -10,7 +10,6 @@ env_version_name="$1"
 cd $root_dir/
 git checkout $env_version_name
 git checkout -b temp
-git merge --ff-only origin/master 
 git checkout master 
 git merge --ff-only temp 
 git push origin master
