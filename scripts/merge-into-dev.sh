@@ -10,7 +10,7 @@ env_version_name="$1"
 cd $root_dir/
 git checkout $env_version_name
 git branch temp
-$root_dir/bump-major-version.sh
+$root_dir/scripts/bump-major-version.sh
 git checkout dev 
 git merge --ff temp 
 git push origin dev
