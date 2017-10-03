@@ -11,4 +11,3 @@ cd $root_dir/
 git checkout dev
 $root_dir/scripts/bump-major-version.sh
 git push origin dev
-git branch -D temp
