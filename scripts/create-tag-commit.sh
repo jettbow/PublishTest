@@ -7,6 +7,7 @@ fi
 git checkout dev
 root_dir=$(dirname $0)/..
 tag=""
+env_version_code=""
 maror=""
 minor=""
 build=$1
@@ -36,6 +37,7 @@ then
           text=$text"$key=${tag}"$newline
         elif [ "$key" == "envVersionCode" ]   
         then
+          env_version_code=$((${value}+1))
           text=$text"$key=$((${value}+1))"$newline
         else
           text=$text"$key=$value"$newline
@@ -49,7 +51,7 @@ $root_dir/scripts/merge-NEW-into-CHANGELOG.sh
 cd $root_dir/
 
 git add -A 
-git commit -m "Tag $tag"
-git tag -a $tag -m "$tag"
+git commit -m "Tag $tag($env_version_code)"
+git tag -a $tag -m "$tag($env_version_code)"
 
 
