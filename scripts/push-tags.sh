@@ -1,3 +1,3 @@
 set -e
-git push -u origin dev
-git push -u origin --follow-tags
+git push origin dev
+git push origin --follow-tags
