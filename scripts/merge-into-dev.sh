@@ -8,10 +8,7 @@ fi
 root_dir=$(dirname $0)/..
 env_version_name="$1"
 cd $root_dir/
-git checkout $env_version_name
-git checkout -b temp
+git checkout dev
 $root_dir/scripts/bump-major-version.sh
-git checkout dev 
-git merge --ff temp 
 git push origin dev
 git branch -D temp

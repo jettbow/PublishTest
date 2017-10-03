@@ -11,6 +11,6 @@ cd $root_dir/
 git checkout $env_version_name
 git checkout -b temp
 git checkout master 
-git merge --ff temp 
+git merge --ff -m "Merge $env_version_name" temp 
 git push origin master
 git branch -D temp
