@@ -1,5 +1,6 @@
 ## [2.37.0]
 ### Added
+Add new feature
 ### Changed
 ### Removed
 ### Fixed
