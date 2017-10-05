@@ -2,7 +2,7 @@
 set -e
 if [ "$1" == "" ]
 then
-  echo "Error:Please specify the versoin name"
+  echo "Error:Please specify the version name"
   exit
 fi
 root_dir=$(dirname $0)/..
