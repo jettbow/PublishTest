@@ -1,5 +1,6 @@
 ## [2.42.0]
 ### Added
+- Add wow
 ### Changed
 ### Removed
 ### Fixed
