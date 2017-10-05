@@ -1,4 +1,9 @@
-## [2.42.0]
+## [2.43.0]
+### Added
+### Changed
+### Removed
+### Fixed
+## [2.42.0] - 2017-10-05
 ### Added
 - Add wow
 ### Changed
